@@ -3,6 +3,7 @@ import { RecipeCardComponent } from "../recipe-card/recipe-card.component";
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
+import { CreateRecipeComponent } from '../create-recipe/create-recipe.component';
 
 @Component({
     selector: 'app-home-page',
@@ -15,11 +16,10 @@ export class HomePageComponent {
 
     recipe = [1,1,1,1,11,1]
 
-    constructor(public dialog: MatDialog) {
-
-    }
+    constructor(public dialog: MatDialog) {}
 
     handleOpenCreateRecipeForm() {
+        this.dialog.open(CreateRecipeComponent)
     }
 
 }

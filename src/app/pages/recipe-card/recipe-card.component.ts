@@ -3,6 +3,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIcon } from '@angular/material/icon';
+import { UpdateRecipeComponent } from '../update-recipe/update-recipe.component';
 @Component({
   selector: 'app-recipe-card',
   standalone: true,
