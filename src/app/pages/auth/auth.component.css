@@ -112,5 +112,5 @@
 
 .form-content .login-form,
 .form content .signup-form{
-    width: calc(100% / 2 -25 px);
+    width: calc(100% / 2 - 25 px);
 }

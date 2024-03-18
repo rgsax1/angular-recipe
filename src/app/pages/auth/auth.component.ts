@@ -37,4 +37,7 @@ export class AuthComponent {
     console.log("login ", this.loginForm.value)
   }
 
+  togglePanel(){
+    this.isRegister=!this.isRegister
+  }
 }
