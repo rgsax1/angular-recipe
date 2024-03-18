@@ -27,7 +27,7 @@ export class AuthServiceService {
     const headers = new HttpHeaders({
       Authorization: `Bearer ${localStorage.getItem("jwt")}`
     })
-    return this.http.post<any>(`${this.baseUrl}/api/auth/signup`, {headers}).pipe (
+    return this.http.post<any>(`${this.baseUrl}/api/users/profile`, {headers}).pipe (
       tap((user) => {
         const currentState = this.authSubject.value;
         this.authSubject.next({...currentState, user})

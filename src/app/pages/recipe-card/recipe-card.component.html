@@ -1,16 +1,15 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <img mat-card-avatar src="https://cardapio.cocobambu.com/assets/images/icones-cardapio/arara.svg" alt="">
-    <mat-card-title>Picanha Black Angus</mat-card-title>
+    <img mat-card-avatar [src]="recipe.image" alt="">
+    <mat-card-title>{{recipe.user.fullName}}</mat-card-title>
     <mat-card-subtitle>(2 à 3 Pessoas)</mat-card-subtitle>
   </mat-card-header>
   <img class="max-h-[400px] object-cover" mat-card-image
-    src="https://api-menu.cocobambu.com/media/images/item/e7c12faec6ea4492a2d60db99b4c8927.jpeg"
+    [src]="recipe.image"
     alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
-      Picanha Black Angus (600g) Picanha da raça Angus, acompanhada de vinagrete, chimichurri, farofa amarela, mandioca
-      cozida ze arroz biro biro.
+      {{recipe.description}}
     </p>
   </mat-card-content>
   <mat-card-actions class="flex justify-between">
@@ -26,7 +25,7 @@
       </button>
     </div>
     <div>
-      <button mat-icon-button aria-label="">
+      <button (click)="handleDeleteRecipe()" mat-icon-button aria-label="">
         <mat-icon>delete</mat-icon>
       </button>
     </div>
