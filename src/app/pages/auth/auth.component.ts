@@ -17,7 +17,7 @@ import { AuthServiceService } from '../../services/Auth/auth-service.service';
 })
 export class AuthComponent {
 
-  isRegister = false;
+  isRegister = true;
 
   constructor(public authService:AuthServiceService){
 
